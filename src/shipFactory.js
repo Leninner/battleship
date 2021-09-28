@@ -18,11 +18,9 @@ const Ship = (length) => {
 const star = Ship(4);
 const lenin = Ship(2);
 
-console.log(star.sunk(lenin.hit()));
-console.log(star.getLength());
-console.log(star.sunk(lenin.hit()));
-console.log(star.getLength());
-console.log(star.sunk(lenin.hit()));
-console.log(star.getLength());
-console.log(star.sunk(lenin.hit()));
-console.log(star.getLength());
+const Gameboard = () => {
+  const displayBoardMe = () => {};
+  const displayBoardEnemy = () => {};
+
+  const receiveAttack = (x, y) => {};
+};

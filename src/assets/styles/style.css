@@ -2,4 +2,46 @@
   font-family: "Stick No Bills", sans-serif;
 }
 
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+section .user {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+section .user .prueba {
+  width: 40px;
+  height: 40px;
+  outline: 1px solid red;
+}
+section .user .prueba:hover {
+  background-color: red;
+}
+section .user .active {
+  background-color: red;
+}
+section .com {
+  width: 400px;
+  height: 400px;
+  background-color: #27272c;
+  display: flex;
+  flex-wrap: wrap;
+}
+section .com .prueba {
+  width: 40px;
+  height: 40px;
+  outline: 1px solid red;
+}
+section .com .prueba:hover {
+  background-color: red;
+}
+section .com .active {
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.css.map */

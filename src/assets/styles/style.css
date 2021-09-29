@@ -38,10 +38,10 @@ section .com .prueba {
   outline: 1px solid red;
 }
 section .com .prueba:hover {
-  background-color: red;
+  background-color: #ff00d4;
 }
 section .com .active {
-  background-color: red;
+  background-color: #ff00d4;
 }
 
 /*# sourceMappingURL=style.css.map */

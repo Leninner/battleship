@@ -2,7 +2,7 @@
  * longitud, dónde han sido golpeados y si se han hundido o no.
  */
 
-const Ship = (arr, name) => {
+const Ship = (arr) => {
   const getSize = () => arr;
   const getName = () => name;
 

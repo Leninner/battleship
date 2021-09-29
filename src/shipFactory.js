@@ -5,22 +5,19 @@
 const Ship = (length) => {
   const getLength = () => length;
 
-  const hit = () => 1;
-
-  const sunk = (damage) => {
+  const hit = (damage) => {
     length -= damage;
-    return length - damage <= 0 ? true : false;
+    if (length === 0) {
+      return sunk();
+    }
+    return length;
+  };
+
+  const sunk = () => {
+    return true;
   };
 
   return { getLength, hit, sunk };
 };
 
-const star = Ship(4);
-const lenin = Ship(2);
-
-const Gameboard = () => {
-  const displayBoardMe = () => {};
-  const displayBoardEnemy = () => {};
-
-  const receiveAttack = (x, y) => {};
-};
+export { Ship };

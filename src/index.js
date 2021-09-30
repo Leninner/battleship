@@ -118,7 +118,6 @@ let selectedShipNameWithIndex;
 ships.forEach((element) => {
   element.addEventListener('mousedown', (e) => {
     selectedShipNameWithIndex = e.target.id;
-    console.log(selectedShipNameWithIndex);
   });
 });
 
@@ -126,8 +125,13 @@ let draggedShip;
 let draggedShipLength;
 
 function dragStart(e) {
-  console.log(this.childNodes[this.childNodes.length - 2]);
   draggedShip = this;
+  for (let i = 0; i < draggedShip.childNodes.length; i++) {
+    if (draggedShip.childNodes[i].nodeType === 3) {
+      draggedShip.childNodes[i].parentNode.removeChild(draggedShip.childNodes[i]);
+    }
+  }
+  console.log(draggedShip.lastChild.id);
   draggedShipLength = draggedShip.childNodes.length;
 }
 
@@ -144,8 +148,14 @@ function dragLeave() {
 }
 
 function dragDrop() {
-  let shipNameWithLastId;
-  console.log(draggedShip.childNodes[draggedShip.childNodes.length - 2].id);
+  //Para ver en donde estará el último elemento de  nuestra nave
+  let shipNameWithLastId = draggedShip.lastChild.id;
+  let shipClass = shipNameWithLastId.slice(0, -2);
+  let lastShipIndex = parseInt(shipNameWithLastId.substr(-1));
+  let shipLastId = lastShipIndex + parseInt(this.dataset.id);
+  let selectedShipIndex = parseInt(selectedShipNameWithIndex.substr(-1));
+  shipLastId = shipLastId - selectedShipIndex;
+  console.log(shipLastId);
 }
 
 function dragEnd() {}

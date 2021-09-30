@@ -127,6 +127,7 @@ let draggedShipLength;
 
 function dragStart(e) {
   console.log(this.childNodes[this.childNodes.length - 2]);
+  console.log(this.childNodes);
   draggedShip = this;
   draggedShipLength = draggedShip.childNodes.length;
 }
@@ -146,6 +147,7 @@ function dragLeave() {
 function dragDrop() {
   let shipNameWithLastId;
   console.log(draggedShip.childNodes[draggedShip.childNodes.length - 2].id);
+  console.log(draggedShip.lastChild.length);
 }
 
 function dragEnd() {}

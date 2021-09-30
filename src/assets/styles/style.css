@@ -1,65 +1,62 @@
-* {
-  font-family: "Stick No Bills", sans-serif;
-}
-
-.ships {
-  width: 100%;
-  height: 120px;
-}
-.ships .star div {
-  width: 40px;
-  height: 40px;
-  background-color: #ad1010;
-  outline: 1px solid blue;
-}
-
-.vertical {
-  display: block;
-}
-
-.horizontal {
+@charset "UTF-8";
+.container {
   display: flex;
 }
 
-section {
-  width: 100%;
-  display: flex;
-}
-section .user {
+.tamaño, .grid-computer, .grid-user {
   width: 400px;
   height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.grid-user {
   background-color: blue;
-  display: flex;
-  flex-wrap: wrap;
 }
-section .user .prueba {
+
+.grid div {
   width: 40px;
   height: 40px;
-  outline: 1px solid red;
 }
-section .user .prueba:hover {
+
+.grid-computer {
   background-color: red;
 }
-section .user .active {
-  background-color: red;
-}
-section .com {
+
+.grid-display {
   width: 400px;
   height: 400px;
-  background-color: #27272c;
-  display: flex;
-  flex-wrap: wrap;
+  background-color: yellow;
 }
-section .com .prueba {
+.grid-display .ships-container, .grid-display .carrier-container, .grid-display .battleship-container, .grid-display .cruiser-container, .grid-display .submarine-container, .grid-display .destroyer-container {
+  height: 40px;
+  display: flex;
+  margin: 10px;
+}
+.grid-display .ship div {
   width: 40px;
   height: 40px;
-  outline: 1px solid red;
 }
-section .com .prueba:hover {
-  background-color: #ff00d4;
+.grid-display .destroyer-container {
+  width: 80px;
+  background-color: orange;
 }
-section .com .active {
-  background-color: #ff00d4;
+.grid-display .submarine-container {
+  width: 120px;
+  background-color: lime;
+}
+.grid-display .cruiser-container {
+  width: 120px;
+  background-color: #ff00ea;
+}
+.grid-display .battleship-container {
+  width: 160px;
+  background-color: red;
+}
+.grid-display .carrier-container {
+  width: 200px;
+  background-color: #0004ff;
 }
 
 /*# sourceMappingURL=style.css.map */

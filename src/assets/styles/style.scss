@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+}
+
+.tamaño {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.grid-user {
+  @extend .tamaño;
+  background-color: blue;
+}
+
+.grid {
+  div {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.grid-computer {
+  @extend .tamaño;
+  background-color: red;
+}
+
+.grid-display {
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+
+  .ships-container {
+    height: 40px;
+    display: flex;
+    margin: 10px;
+  }
+
+  .ship {
+    div {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .destroyer-container {
+    width: 80px;
+    background-color: orange;
+    @extend .ships-container;
+  }
+
+  .submarine-container {
+    width: 120px;
+    background-color: rgb(0, 255, 0);
+    @extend .ships-container;
+  }
+
+  .cruiser-container {
+    width: 120px;
+    @extend .ships-container;
+    background-color: rgb(255, 0, 234);
+  }
+
+  .battleship-container {
+    width: 160px;
+    @extend .ships-container;
+    background-color: rgb(255, 0, 0);
+  }
+
+  .carrier-container {
+    width: 200px;
+    @extend .ships-container;
+    background-color: rgb(0, 4, 255);
+  }
+}

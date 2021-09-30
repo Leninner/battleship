@@ -97,3 +97,55 @@ const rotate = () => {
 };
 
 rotateButton.addEventListener('click', rotate);
+
+// Mover al grid del usuario con API Drag and Drop de HTML
+
+ships.forEach((element) => {
+  element.addEventListener('dragstart', dragStart);
+});
+
+userSquares.forEach((square) => {
+  square.addEventListener('dragstart', dragStart);
+  square.addEventListener('dragover', dragOver);
+  square.addEventListener('dragenter', dragEnter);
+  square.addEventListener('dragleave', dragLeave);
+  square.addEventListener('drop', dragDrop);
+  square.addEventListener('dragend', dragEnd);
+});
+
+let selectedShipNameWithIndex;
+
+ships.forEach((element) => {
+  element.addEventListener('mousedown', (e) => {
+    selectedShipNameWithIndex = e.target.id;
+    console.log(selectedShipNameWithIndex);
+  });
+});
+
+let draggedShip;
+let draggedShipLength;
+
+function dragStart(e) {
+  console.log(this.childNodes[this.childNodes.length - 2]);
+  draggedShip = this;
+  draggedShipLength = draggedShip.childNodes.length;
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragEnter(e) {
+  e.preventDefault();
+}
+
+function dragLeave() {
+  console.log('drag leave');
+}
+
+function dragDrop() {
+  let shipNameWithLastId;
+  console.log(draggedShip.childNodes[draggedShip.childNodes.length - 2].id);
+}
+
+function dragEnd() {}

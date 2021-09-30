@@ -79,5 +79,3 @@ generate(shipArray[1]);
 generate(shipArray[2]);
 generate(shipArray[3]);
 generate(shipArray[4]);
-
-console.log(shipArray);

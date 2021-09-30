@@ -23,6 +23,7 @@ const rotateButton = document.getElementById('rotate');
 const turnDisplay = document.querySelector('#whose-go');
 const infoDisplay = document.querySelector('#info');
 const width = 10;
+let isHorizontal = true;
 
 createBoards(userGrid, userSquares);
 createBoards(computerGrid, computerSquares);
@@ -79,3 +80,20 @@ generate(shipArray[1]);
 generate(shipArray[2]);
 generate(shipArray[3]);
 generate(shipArray[4]);
+
+// Función para rotar las naves
+
+const rotate = () => {
+  if (isHorizontal) {
+    destroyer.getElement().classList.toggle('destroyer-container-vertical');
+    submarine.getElement().classList.toggle('submarine-container-vertical');
+    cruiser.getElement().classList.toggle('cruiser-container-vertical');
+    battleship.getElement().classList.toggle('battleship-container-vertical');
+    carrier.getElement().classList.toggle('carrier-container-vertical');
+    displayGrid.classList.toggle('isHorizontal');
+    isHorizontal = false;
+  }
+  isHorizontal = true;
+};
+
+rotateButton.addEventListener('click', rotate);

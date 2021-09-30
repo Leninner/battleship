@@ -57,21 +57,50 @@
   width: 80px;
   background-color: orange;
 }
+.grid-display .destroyer-container-vertical {
+  width: 40px;
+  height: 80px;
+  flex-wrap: wrap;
+}
 .grid-display .submarine-container {
   width: 120px;
   background-color: lime;
+}
+.grid-display .submarine-container-vertical {
+  width: 40px;
+  height: 120px;
+  flex-wrap: wrap;
 }
 .grid-display .cruiser-container {
   width: 120px;
   background-color: #ff00ea;
 }
+.grid-display .cruiser-container-vertical {
+  width: 40px;
+  height: 120px;
+  flex-wrap: wrap;
+}
 .grid-display .battleship-container {
   width: 160px;
   background-color: red;
 }
+.grid-display .battleship-container-vertical {
+  width: 40px;
+  height: 160px;
+  flex-wrap: wrap;
+}
 .grid-display .carrier-container {
   width: 200px;
   background-color: #0004ff;
+}
+.grid-display .carrier-container-vertical {
+  width: 40px;
+  height: 200px;
+  flex-wrap: wrap;
+}
+
+.isHorizontal {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

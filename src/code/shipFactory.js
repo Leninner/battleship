@@ -1,22 +1,44 @@
-/**
- * longitud, dónde han sido golpeados y si se han hundido o no.
- */
+const width = 10;
 
-const Ship = (arr) => {
-  const getSize = () => arr;
+const shipss = (name) => {
+  let elementoHTML;
+  let X;
+  let Y;
+  switch (name) {
+    case 'destroyer':
+      elementoHTML = document.querySelector('.destroyer-container');
+      X = [0, 1];
+      Y = [0, width];
+      break;
+    case 'submarine':
+      elementoHTML = document.querySelector('.submarine-container');
+      X = [0, 1, 2];
+      Y = [0, width, width * 2];
+      break;
+    case 'cruiser':
+      elementoHTML = document.querySelector('.cruiser-container');
+      X = [0, 1, 2];
+      Y = [0, width, width * 2];
+      break;
+    case 'battleship':
+      elementoHTML = document.querySelector('.battleship-container');
+      X = [0, 1, 2, 3];
+      Y = [0, width, width * 2, width * 3];
+      break;
+    case 'carrier':
+      elementoHTML = document.querySelector('.carrier-container');
+      X = [0, 1, 2, 3, 4];
+      Y = [0, width, width * 2, width * 3, width * 4];
+      break;
+  }
+
   const getName = () => name;
-
-  const hit = (position) => {
-    arr[position] = -1;
+  const getElement = () => elementoHTML;
+  const getDirections = () => {
+    return [X, Y];
   };
 
-  const isSunk = () => {
-    return arr.every((element) => element === -1) ? true : false;
-  };
-
-  return { getSize, getName, hit, isSunk };
+  return { getName, getElement, getDirections };
 };
 
-// En cada golpe, debemos comprobar si está hundido o sigue vivo
-
-export { Ship };
+export { shipss };

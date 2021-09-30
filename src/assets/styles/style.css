@@ -21,7 +21,22 @@
 }
 
 .grid-computer {
+  background-color: #00e1ff;
+}
+.grid-computer .destroyer {
+  background-color: orange;
+}
+.grid-computer .submarine {
+  background-color: lime;
+}
+.grid-computer .cruiser {
+  background-color: #ff00ea;
+}
+.grid-computer .battleship {
   background-color: red;
+}
+.grid-computer .carrier {
+  background-color: #0004ff;
 }
 
 .grid-display {

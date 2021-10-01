@@ -147,7 +147,7 @@ function dragLeave() {
   console.log('drag leave');
 }
 
-// TODO: sHacer tests para esta función y para los otros módulos
+// TODO: Hacer tests para esta función y para los otros módulos
 function dragDrop() {
   //Para ver en donde estará el último elemento de  nuestra nave
   let shipNameWithLastId = draggedShip.lastChild.id;

@@ -360,10 +360,12 @@ function checkForWin() {
   }
 
   if (destroyerCount + submarineCount + cruiserCount + battleshipCount + carrierCount === 50) {
+    turnDisplay.remove();
     infoDisplay.innerHTML = 'YOU WIN';
     gameOver();
   }
   if (cpuDestroyerCount + cpuSubmarineCount + cpuCarrierCount + cpuBattleshipCount + cpuCruiserCount === 50) {
+    turnDisplay.remove();
     infoDisplay.innerHTML = 'CPU WIN';
     gameOver();
   }

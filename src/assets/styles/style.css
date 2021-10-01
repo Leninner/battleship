@@ -11,32 +11,45 @@
   margin: 20px;
 }
 
-.grid-user {
-  background-color: blue;
-}
-
 .grid div {
   width: 40px;
   height: 40px;
 }
 
+.grid-user {
+  background-color: blue;
+}
+
 .grid-computer {
   background-color: #00e1ff;
 }
-.grid-computer .destroyer {
+
+.destroyer {
   background-color: orange;
 }
-.grid-computer .submarine {
+
+.submarine {
   background-color: lime;
 }
-.grid-computer .cruiser {
+
+.cruiser {
   background-color: #ff00ea;
 }
-.grid-computer .battleship {
+
+.battleship {
   background-color: red;
 }
-.grid-computer .carrier {
+
+.carrier {
   background-color: #0004ff;
+}
+
+.boom {
+  background-color: red;
+}
+
+.miss {
+  background-color: greenyellow;
 }
 
 .grid-display {

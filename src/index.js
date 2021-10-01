@@ -86,9 +86,8 @@ const rotate = () => {
     battleship.getElement().classList.toggle('battleship-container-vertical');
     carrier.getElement().classList.toggle('carrier-container-vertical');
     displayGrid.classList.toggle('isHorizontal');
-    isHorizontal = false;
+    isHorizontal = !isHorizontal;
   }
-  isHorizontal = true;
 };
 
 rotateButton.addEventListener('click', rotate);

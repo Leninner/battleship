@@ -86,7 +86,18 @@ const rotate = () => {
     battleship.getElement().classList.toggle('battleship-container-vertical');
     carrier.getElement().classList.toggle('carrier-container-vertical');
     displayGrid.classList.toggle('isHorizontal');
-    isHorizontal = !isHorizontal;
+    isHorizontal = false;
+    return;
+  }
+
+  if (!isHorizontal) {
+    destroyer.getElement().classList.toggle('destroyer-container-vertical');
+    submarine.getElement().classList.toggle('submarine-container-vertical');
+    cruiser.getElement().classList.toggle('cruiser-container-vertical');
+    battleship.getElement().classList.toggle('battleship-container-vertical');
+    carrier.getElement().classList.toggle('carrier-container-vertical');
+    displayGrid.classList.toggle('isHorizontal');
+    isHorizontal = true;
   }
 };
 

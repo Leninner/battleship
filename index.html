@@ -12,50 +12,84 @@
       href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/9db963f039.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="grid grid-user"></div>
-      <div class="grid grid-computer"></div>
-    </div>
-
-    <div class="hidden-info">
+    <section class="home">
+      <header></header>
       <button id="start">Star Game</button>
-      <button id="rotate">Rotate Your Ships</button>
-      <h3 id="whose-go">Your Go</h3>
-      <h3 id="info"></h3>
-    </div>
+    </section>
 
-    <div class="grid-display">
-      <div class="ship destroyer-container" draggable="true">
-        <div id="destroyer-0"></div>
-        <div id="destroyer-1"></div>
+    <section class="game ocultar">
+      <header>
+        <h2>BATTLESHIP</h2>
+        <div>
+          <ul>
+            <li><a href="https://github.com/Leninner/weather-app" target="_blank">Repositorio</a></li>
+            <li><a href="https://www.linkedin.com/in/leninner/" target="_blank">LinkedIn</a></li>
+            <li>
+              <a href="https://bit.ly/3lHXq1m" target="_blank">Hire Me</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="info-gamers">
+        <div id="tu">
+          <p>YOUR FLEET</p>
+        </div>
+        <div id="cpu">
+          <p>OPONENT FLEET</p>
+        </div>
       </div>
-      <div class="ship submarine-container" draggable="true">
-        <div id="submarine-0"></div>
-        <div id="submarine-1"></div>
-        <div id="submarine-2"></div>
+
+      <div class="container">
+        <div class="grid grid-user"></div>
+        <div class="grid grid-computer"></div>
       </div>
-      <div class="ship cruiser-container" draggable="true">
-        <div id="cruiser-0"></div>
-        <div id="cruiser-1"></div>
-        <div id="cruiser-2"></div>
+
+      <div class="hidden-info">
+        <button id="rotate">Rotate Your Ships</button>
+        <h3 id="whose-go">Pon tus fichas en el tablero</h3>
+        <h3 id="info"></h3>
       </div>
-      <div class="ship battleship-container" draggable="true">
-        <div id="battleship-0"></div>
-        <div id="battleship-1"></div>
-        <div id="battleship-2"></div>
-        <div id="battleship-3"></div>
+
+      <div class="grid-display">
+        <div class="ship destroyer-container" draggable="true">
+          <div id="destroyer-0"></div>
+          <div id="destroyer-1"></div>
+        </div>
+        <div class="ship submarine-container" draggable="true">
+          <div id="submarine-0"></div>
+          <div id="submarine-1"></div>
+          <div id="submarine-2"></div>
+        </div>
+        <div class="ship cruiser-container" draggable="true">
+          <div id="cruiser-0"></div>
+          <div id="cruiser-1"></div>
+          <div id="cruiser-2"></div>
+        </div>
+        <div class="ship battleship-container" draggable="true">
+          <div id="battleship-0"></div>
+          <div id="battleship-1"></div>
+          <div id="battleship-2"></div>
+          <div id="battleship-3"></div>
+        </div>
+        <div class="ship carrier-container" draggable="true">
+          <div id="carrier-0"></div>
+          <div id="carrier-1"></div>
+          <div id="carrier-2"></div>
+          <div id="carrier-3"></div>
+          <div id="carrier-4"></div>
+        </div>
       </div>
-      <div class="ship carrier-container" draggable="true">
-        <div id="carrier-0"></div>
-        <div id="carrier-1"></div>
-        <div id="carrier-2"></div>
-        <div id="carrier-3"></div>
-        <div id="carrier-4"></div>
-      </div>
-    </div>
+    </section>
 
     <script src="./src/index.js" type="module"></script>
     <script src="./src/code/shipFactory.js" type="module"></script>

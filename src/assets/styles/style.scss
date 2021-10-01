@@ -1,46 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$background-main: #eeeff0;
+
+.ocultar {
+  display: none;
+}
+
+.game {
+  font-family: 'Roboto', sans-serif;
+  .info-gamers {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 20px;
+    div {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 350px;
+      height: 40px;
+      border-radius: 5px;
+      color: white;
+    }
+    #tu {
+      background-color: #e7091fe5;
+    }
+    #cpu {
+      background-color: #3f4454c4;
+    }
+  }
+}
+
+header {
+  font-family: 'Stick No Bills', sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(209, 206, 206);
+  background-color: $background-main;
+
+  h2 {
+    margin: 20px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin: 20px;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
 .container {
   display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .tamaño {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 .grid {
   div {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
+    outline: 1.5px solid white;
+    border-radius: 5px;
+    transition: 0.1s ease all;
+  }
+  div:hover {
+    background-color: #91d0f1;
   }
 }
 
 .grid-user {
   @extend .tamaño;
-  background-color: blue;
+  background-color: #b1def6;
 }
 
 .grid-computer {
   @extend .tamaño;
-  background-color: rgb(0, 225, 255);
+  background-color: #d0d1d3;
 }
 
+$color-ships: #a19db0;
+
 .destroyer {
-  background-color: orange;
+  background-color: $color-ships;
 }
 .submarine {
-  background-color: rgb(0, 255, 0);
+  background-color: $color-ships;
 }
 .cruiser {
-  background-color: rgb(255, 0, 234);
+  background-color: $color-ships;
 }
 .battleship {
-  background-color: rgb(255, 0, 0);
+  background-color: $color-ships;
 }
 .carrier {
-  background-color: rgb(0, 4, 255);
+  background-color: $color-ships;
 }
 
 .boom {
@@ -48,79 +123,80 @@
 }
 
 .miss {
-  background-color: greenyellow;
+  background-color: rgb(0, 241, 129);
 }
 
 .grid-display {
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  display: flex;
+  height: 220px;
   background-color: yellow;
 
   .ships-container {
-    height: 40px;
+    height: 35px;
     display: flex;
     margin: 10px;
   }
 
   .ship {
     div {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
   }
 
   .destroyer-container {
-    width: 80px;
-    background-color: orange;
+    width: 70px;
+    background-color: $color-ships;
     @extend .ships-container;
   }
   .destroyer-container-vertical {
-    width: 40px;
-    height: 80px;
+    width: 35px;
+    height: 70px;
     flex-wrap: wrap;
   }
 
   .submarine-container {
-    width: 120px;
-    background-color: rgb(0, 255, 0);
+    width: 105px;
+    background-color: $color-ships;
     @extend .ships-container;
   }
   .submarine-container-vertical {
-    width: 40px;
-    height: 120px;
+    width: 35px;
+    height: 105px;
     flex-wrap: wrap;
   }
 
   .cruiser-container {
-    width: 120px;
+    width: 105px;
     @extend .ships-container;
-    background-color: rgb(255, 0, 234);
+    background-color: $color-ships;
   }
   .cruiser-container-vertical {
-    width: 40px;
-    height: 120px;
+    width: 35px;
+    height: 105px;
     flex-wrap: wrap;
   }
 
   .battleship-container {
-    width: 160px;
+    width: 140px;
     @extend .ships-container;
-    background-color: rgb(255, 0, 0);
+    background-color: $color-ships;
   }
   .battleship-container-vertical {
-    width: 40px;
-    height: 160px;
+    width: 35px;
+    height: 140px;
     flex-wrap: wrap;
   }
 
   .carrier-container {
-    width: 200px;
+    width: 175px;
     @extend .ships-container;
-    background-color: rgb(0, 4, 255);
+    background-color: $color-ships;
   }
   .carrier-container-vertical {
-    width: 40px;
-    height: 200px;
+    width: 35px;
+    height: 140px;
     flex-wrap: wrap;
   }
 }

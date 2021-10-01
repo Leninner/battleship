@@ -214,6 +214,13 @@ function dragDrop() {
   } else return;
 
   displayGrid.removeChild(draggedShip);
+  console.log(displayGrid.childNodes);
+  if (displayGrid.childNodes.length === 6) {
+    displayGrid.remove();
+    playGame();
+  } else {
+    turnDisplay.innerHTML = 'Pon tus fichas en el tablero';
+  }
 }
 
 function dragEnd() {
@@ -353,7 +360,9 @@ function checkForWin() {
 
 function gameOver() {
   isGameOver = true;
-  startButton.removeEventListener('click', playGame);
 }
 
-startButton.addEventListener('click', playGame);
+startButton.addEventListener('click', () => {
+  document.querySelector('.home').classList.add('ocultar');
+  document.querySelector('.game').classList.remove('ocultar');
+});

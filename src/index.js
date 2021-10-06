@@ -428,7 +428,14 @@ function gameOver() {
   isGameOver = true;
 }
 
+//Métodos para iniciar juego y volver al home
+
 startButton.addEventListener('click', () => {
   document.querySelector('.home').classList.add('ocultar');
+  document.querySelector('.home').classList.remove('home');
   document.querySelector('.game').classList.remove('ocultar');
+});
+
+document.querySelector('#return').addEventListener('click', () => {
+  window.location.reload();
 });

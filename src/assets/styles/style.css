@@ -9,6 +9,48 @@
   display: none;
 }
 
+.home {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #001219;
+}
+.home #start {
+  margin: 30px 0px;
+  width: 300px;
+  height: 45px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #f72585;
+  color: white;
+  border-style: none;
+  outline: none;
+  border-radius: 25px;
+  transition: 0.5s ease all;
+}
+.home #start:hover {
+  outline: 2px solid #f72585;
+  background-color: white;
+  color: #001219;
+}
+.home .main {
+  display: block;
+  text-align: center;
+}
+.home .main h1 {
+  font-size: 140px;
+  color: white;
+}
+.home .main h2 {
+  font-size: 40px;
+  color: #ffba08;
+  font-weight: 400;
+}
+
 .game {
   font-family: "Roboto", sans-serif;
 }
@@ -44,10 +86,17 @@
   border-bottom: 1px solid #d1cece;
   background-color: #eeeff0;
 }
+.game header #return {
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .game header h2 {
   margin: 20px;
 }
 .game header ul {
+  margin-right: 35px;
   list-style: none;
   display: flex;
 }

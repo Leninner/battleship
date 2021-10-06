@@ -35,8 +35,7 @@
 .game .info-gamers #cpu {
   background-color: #3f4454c4;
 }
-
-header {
+.game header {
   font-family: "Stick No Bills", sans-serif;
   width: 100%;
   display: flex;
@@ -45,162 +44,147 @@ header {
   border-bottom: 1px solid #d1cece;
   background-color: #eeeff0;
 }
-header h2 {
+.game header h2 {
   margin: 20px;
 }
-header ul {
+.game header ul {
   list-style: none;
   display: flex;
 }
-header ul li {
+.game header ul li {
   margin: 20px;
 }
-header ul li a {
+.game header ul li a {
   text-decoration: none;
   color: black;
 }
-
-.container {
+.game .container {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
-
-.tamaño, .grid-computer, .grid-user {
+.game .tamaño, .game .grid-computer, .game .grid-user {
   width: 350px;
   height: 350px;
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0px;
 }
-
-.grid div {
+.game .grid div {
   width: 35px;
   height: 35px;
   outline: 1.5px solid white;
   border-radius: 5px;
   transition: 0.1s ease all;
 }
-.grid div:hover {
+.game .grid div:hover {
   background-color: #91d0f1;
 }
-
-.grid-user {
+.game .grid-user {
   background-color: #b1def6;
 }
-
-.grid-computer {
+.game .grid-computer {
   background-color: #adaeaf;
 }
-
-.destroyer {
+.game .destroyer {
   background-color: #adaeaf;
 }
-
-.submarine {
+.game .submarine {
   background-color: #adaeaf;
 }
-
-.cruiser {
+.game .cruiser {
   background-color: #adaeaf;
 }
-
-.battleship {
+.game .battleship {
   background-color: #adaeaf;
 }
-
-.carrier {
+.game .carrier {
   background-color: #adaeaf;
 }
-
-.boom {
+.game .boom {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   background-color: #ece8e8;
 }
-.boom .fas {
+.game .boom .fas {
   color: #e7091fe5;
 }
-
-.miss {
+.game .miss {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   background-color: #ece8e8;
 }
-.miss .fas {
+.game .miss .fas {
   color: #5cb8e9;
 }
-
-.grid-display {
+.game .grid-display {
   width: 800px;
   display: flex;
   height: 220px;
   background-color: yellow;
 }
-.grid-display .ships-container, .grid-display .carrier-container, .grid-display .battleship-container, .grid-display .cruiser-container, .grid-display .submarine-container, .grid-display .destroyer-container {
+.game .grid-display .ships-container, .game .grid-display .carrier-container, .game .grid-display .battleship-container, .game .grid-display .cruiser-container, .game .grid-display .submarine-container, .game .grid-display .destroyer-container {
   height: 35px;
   display: flex;
   margin: 10px;
 }
-.grid-display .ship div {
+.game .grid-display .ship div {
   width: 35px;
   height: 35px;
 }
-.grid-display .destroyer-container {
+.game .grid-display .destroyer-container {
   width: 70px;
   background-color: #adaeaf;
 }
-.grid-display .destroyer-container-vertical {
+.game .grid-display .destroyer-container-vertical {
   width: 35px;
   height: 70px;
   flex-wrap: wrap;
 }
-.grid-display .submarine-container {
+.game .grid-display .submarine-container {
   width: 105px;
   background-color: #adaeaf;
 }
-.grid-display .submarine-container-vertical {
+.game .grid-display .submarine-container-vertical {
   width: 35px;
   height: 105px;
   flex-wrap: wrap;
 }
-.grid-display .cruiser-container {
+.game .grid-display .cruiser-container {
   width: 105px;
   background-color: #adaeaf;
 }
-.grid-display .cruiser-container-vertical {
+.game .grid-display .cruiser-container-vertical {
   width: 35px;
   height: 105px;
   flex-wrap: wrap;
 }
-.grid-display .battleship-container {
+.game .grid-display .battleship-container {
   width: 140px;
   background-color: #adaeaf;
 }
-.grid-display .battleship-container-vertical {
+.game .grid-display .battleship-container-vertical {
   width: 35px;
   height: 140px;
   flex-wrap: wrap;
 }
-.grid-display .carrier-container {
+.game .grid-display .carrier-container {
   width: 175px;
   background-color: #adaeaf;
 }
-.grid-display .carrier-container-vertical {
+.game .grid-display .carrier-container-vertical {
   width: 35px;
   height: 140px;
   flex-wrap: wrap;
 }
-
-.isHorizontal {
+.game .isHorizontal {
   display: flex;
 }
-
-.gameController {
+.game .gameController {
   font-family: "Stick No Bills", sans-serif;
   font-size: 36px;
   width: 100%;

@@ -37,194 +37,194 @@ $red: #e7091fe5;
       background-color: #3f4454c4;
     }
   }
-}
 
-header {
-  font-family: 'Stick No Bills', sans-serif;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(209, 206, 206);
-  background-color: $background-main;
-
-  h2 {
-    margin: 20px;
-  }
-
-  ul {
-    list-style: none;
+  header {
+    font-family: 'Stick No Bills', sans-serif;
+    width: 100%;
     display: flex;
-    li {
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(209, 206, 206);
+    background-color: $background-main;
+
+    h2 {
       margin: 20px;
-      a {
-        text-decoration: none;
-        color: black;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 20px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
-}
 
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.tamaño {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0px;
-}
-
-.grid {
-  div {
-    width: 35px;
-    height: 35px;
-    outline: 1.5px solid white;
-    border-radius: 5px;
-    transition: 0.1s ease all;
-  }
-  div:hover {
-    background-color: #91d0f1;
-  }
-}
-
-.grid-user {
-  @extend .tamaño;
-  background-color: #b1def6;
-}
-
-.grid-computer {
-  @extend .tamaño;
-  background-color: $color-ships;
-}
-
-.destroyer {
-  background-color: $color-ships;
-}
-.submarine {
-  background-color: $color-ships;
-}
-.cruiser {
-  background-color: $color-ships;
-}
-.battleship {
-  background-color: $color-ships;
-}
-.carrier {
-  background-color: $color-ships;
-}
-
-.boom {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(236, 232, 232);
-  .fas {
-    color: $red;
-  }
-}
-
-.miss {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(236, 232, 232);
-  .fas {
-    color: #5cb8e9;
-  }
-}
-
-.grid-display {
-  width: 800px;
-  display: flex;
-  height: 220px;
-  background-color: yellow;
-
-  .ships-container {
-    height: 35px;
+  .container {
     display: flex;
-    margin: 10px;
+    width: 100%;
+    justify-content: space-evenly;
   }
 
-  .ship {
+  .tamaño {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+  }
+
+  .grid {
     div {
       width: 35px;
       height: 35px;
+      outline: 1.5px solid white;
+      border-radius: 5px;
+      transition: 0.1s ease all;
+    }
+    div:hover {
+      background-color: #91d0f1;
     }
   }
 
-  .destroyer-container {
-    width: 70px;
-    background-color: $color-ships;
-    @extend .ships-container;
-  }
-  .destroyer-container-vertical {
-    width: 35px;
-    height: 70px;
-    flex-wrap: wrap;
+  .grid-user {
+    @extend .tamaño;
+    background-color: #b1def6;
   }
 
-  .submarine-container {
-    width: 105px;
-    background-color: $color-ships;
-    @extend .ships-container;
-  }
-  .submarine-container-vertical {
-    width: 35px;
-    height: 105px;
-    flex-wrap: wrap;
-  }
-
-  .cruiser-container {
-    width: 105px;
-    @extend .ships-container;
+  .grid-computer {
+    @extend .tamaño;
     background-color: $color-ships;
   }
-  .cruiser-container-vertical {
-    width: 35px;
-    height: 105px;
-    flex-wrap: wrap;
-  }
 
-  .battleship-container {
-    width: 140px;
-    @extend .ships-container;
+  .destroyer {
     background-color: $color-ships;
   }
-  .battleship-container-vertical {
-    width: 35px;
-    height: 140px;
-    flex-wrap: wrap;
-  }
-
-  .carrier-container {
-    width: 175px;
-    @extend .ships-container;
+  .submarine {
     background-color: $color-ships;
   }
-  .carrier-container-vertical {
-    width: 35px;
-    height: 140px;
-    flex-wrap: wrap;
+  .cruiser {
+    background-color: $color-ships;
   }
-}
+  .battleship {
+    background-color: $color-ships;
+  }
+  .carrier {
+    background-color: $color-ships;
+  }
 
-.isHorizontal {
-  display: flex;
-}
+  .boom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(236, 232, 232);
+    .fas {
+      color: $red;
+    }
+  }
 
-.gameController {
-  font-family: 'Stick No Bills', sans-serif;
-  font-size: 36px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  .miss {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(236, 232, 232);
+    .fas {
+      color: #5cb8e9;
+    }
+  }
+
+  .grid-display {
+    width: 800px;
+    display: flex;
+    height: 220px;
+    background-color: yellow;
+
+    .ships-container {
+      height: 35px;
+      display: flex;
+      margin: 10px;
+    }
+
+    .ship {
+      div {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    .destroyer-container {
+      width: 70px;
+      background-color: $color-ships;
+      @extend .ships-container;
+    }
+    .destroyer-container-vertical {
+      width: 35px;
+      height: 70px;
+      flex-wrap: wrap;
+    }
+
+    .submarine-container {
+      width: 105px;
+      background-color: $color-ships;
+      @extend .ships-container;
+    }
+    .submarine-container-vertical {
+      width: 35px;
+      height: 105px;
+      flex-wrap: wrap;
+    }
+
+    .cruiser-container {
+      width: 105px;
+      @extend .ships-container;
+      background-color: $color-ships;
+    }
+    .cruiser-container-vertical {
+      width: 35px;
+      height: 105px;
+      flex-wrap: wrap;
+    }
+
+    .battleship-container {
+      width: 140px;
+      @extend .ships-container;
+      background-color: $color-ships;
+    }
+    .battleship-container-vertical {
+      width: 35px;
+      height: 140px;
+      flex-wrap: wrap;
+    }
+
+    .carrier-container {
+      width: 175px;
+      @extend .ships-container;
+      background-color: $color-ships;
+    }
+    .carrier-container-vertical {
+      width: 35px;
+      height: 140px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .isHorizontal {
+    display: flex;
+  }
+
+  .gameController {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 36px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

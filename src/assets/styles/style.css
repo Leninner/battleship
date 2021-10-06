@@ -90,27 +90,27 @@ header ul li a {
 }
 
 .grid-computer {
-  background-color: #d0d1d3;
+  background-color: #adaeaf;
 }
 
 .destroyer {
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 
 .submarine {
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 
 .cruiser {
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 
 .battleship {
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 
 .carrier {
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 
 .boom {
@@ -138,7 +138,7 @@ header ul li a {
 }
 .grid-display .destroyer-container {
   width: 70px;
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 .grid-display .destroyer-container-vertical {
   width: 35px;
@@ -147,7 +147,7 @@ header ul li a {
 }
 .grid-display .submarine-container {
   width: 105px;
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 .grid-display .submarine-container-vertical {
   width: 35px;
@@ -156,7 +156,7 @@ header ul li a {
 }
 .grid-display .cruiser-container {
   width: 105px;
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 .grid-display .cruiser-container-vertical {
   width: 35px;
@@ -165,7 +165,7 @@ header ul li a {
 }
 .grid-display .battleship-container {
   width: 140px;
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 .grid-display .battleship-container-vertical {
   width: 35px;
@@ -174,7 +174,7 @@ header ul li a {
 }
 .grid-display .carrier-container {
   width: 175px;
-  background-color: #a19db0;
+  background-color: #adaeaf;
 }
 .grid-display .carrier-container-vertical {
   width: 35px;

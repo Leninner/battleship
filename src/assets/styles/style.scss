@@ -5,6 +5,7 @@
 }
 
 $background-main: #eeeff0;
+$color-ships: #adaeaf;
 
 .ocultar {
   display: none;
@@ -97,10 +98,8 @@ header {
 
 .grid-computer {
   @extend .tamaño;
-  background-color: #d0d1d3;
+  background-color: $color-ships;
 }
-
-$color-ships: #a19db0;
 
 .destroyer {
   background-color: $color-ships;

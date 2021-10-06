@@ -284,6 +284,7 @@ function revealSquare(square) {
     square.classList.add('miss');
   }
   currentPlayer = 'computer';
+
   playGame();
 }
 
@@ -297,7 +298,6 @@ function computerGo() {
   let random = Math.floor(Math.random() * userSquares.length);
 
   if (!userSquares[random].classList.contains('boom')) {
-    userSquares[random].classList.add('boom');
     if (userSquares[random].classList.contains('destroyer')) cpuDestroyerCount++;
     if (userSquares[random].classList.contains('submarine')) cpuSubmarineCount++;
     if (userSquares[random].classList.contains('cruiser')) cpuCruiserCount++;
@@ -319,43 +319,73 @@ function computerGo() {
 function checkForWin() {
   if (destroyerCount === 2) {
     infoDisplay.innerHTML = 'You sunk the computer destroyer';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     destroyerCount = 10;
   }
   if (submarineCount === 3) {
     infoDisplay.innerHTML = 'You sunk the computer submarine';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     submarineCount = 10;
   }
   if (cruiserCount === 3) {
     infoDisplay.innerHTML = 'You sunk the computer cruiser';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cruiserCount = 10;
   }
   if (battleshipCount === 4) {
     infoDisplay.innerHTML = 'You sunk the computer battleship';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     battleshipCount = 10;
   }
   if (carrierCount === 5) {
     infoDisplay.innerHTML = 'You sunk the computer carrier';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     carrierCount = 10;
   }
 
   if (cpuDestroyerCount === 2) {
     infoDisplay.innerHTML = 'The computer sunk you Destroyer';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cpuDestroyerCount = 10;
   }
   if (cpuSubmarineCount === 3) {
     infoDisplay.innerHTML = 'The computer sunk you Submarine';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cpuSubmarineCount = 10;
   }
   if (cpuCruiserCount === 3) {
     infoDisplay.innerHTML = 'The computer sunk you Cruiser';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cpuCruiserCount = 10;
   }
   if (cpuBattleshipCount === 4) {
     infoDisplay.innerHTML = 'The computer sunk you Battleship';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cpuBattleshipCount = 10;
   }
   if (cpuCarrierCount === 5) {
     infoDisplay.innerHTML = 'The computer sunk you Carrier';
+    setTimeout(() => {
+      infoDisplay.innerHTML = '';
+    }, 1000);
     cpuCarrierCount = 10;
   }
 

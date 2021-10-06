@@ -228,9 +228,10 @@ function dragDrop() {
   console.log(displayGrid.childNodes);
   if (displayGrid.childNodes.length === 6) {
     displayGrid.remove();
+    document.querySelector('.hidden-info').remove();
     playGame();
   } else {
-    turnDisplay.innerHTML = 'Pon tus fichas en el tablero';
+    turnDisplay.innerHTML = 'Ubica tus Fichas';
   }
 }
 
@@ -278,10 +279,20 @@ function revealSquare(square) {
     checkForWin();
   }
 
-  if (square.classList.contains('taken')) {
-    square.classList.add('boom');
+  if (square.classList.contains('boom') || square.classList.contains('miss')) {
+    return;
   } else {
-    square.classList.add('miss');
+    if (square.classList.contains('taken')) {
+      const fondo = document.createElement('i');
+      fondo.classList.add('fas', 'fa-circle');
+      square.appendChild(fondo);
+      square.classList.add('boom');
+    } else {
+      const fondo = document.createElement('i');
+      fondo.classList.add('fas', 'fa-circle');
+      square.appendChild(fondo);
+      square.classList.add('miss');
+    }
   }
   currentPlayer = 'computer';
 
@@ -304,12 +315,23 @@ function computerGo() {
     if (userSquares[random].classList.contains('battleship')) cpuBattleshipCount++;
     if (userSquares[random].classList.contains('carrier')) cpuCarrierCount++;
     checkForWin();
-  } else computerGo();
+  }
+  // else computerGo();
 
-  if (userSquares[random].classList.contains('taken')) {
-    userSquares[random].classList.add('boom');
+  if (userSquares[random].classList.contains('boom') || userSquares[random].classList.contains('miss')) {
+    computerGo();
   } else {
-    userSquares[random].classList.add('miss');
+    if (userSquares[random].classList.contains('taken')) {
+      const fondo = document.createElement('i');
+      fondo.classList.add('fas', 'fa-circle');
+      userSquares[random].appendChild(fondo);
+      userSquares[random].classList.add('boom');
+    } else {
+      const fondo = document.createElement('i');
+      fondo.classList.add('fas', 'fa-circle');
+      userSquares[random].appendChild(fondo);
+      userSquares[random].classList.add('miss');
+    }
   }
 
   currentPlayer = 'user';
@@ -391,6 +413,7 @@ function checkForWin() {
 
   if (destroyerCount + submarineCount + cruiserCount + battleshipCount + carrierCount === 50) {
     turnDisplay.remove();
+    //TODO: mostrar ganador en la página de inicio
     infoDisplay.innerHTML = 'YOU WIN';
     gameOver();
   }

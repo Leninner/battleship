@@ -114,11 +114,25 @@ header ul li a {
 }
 
 .boom {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ece8e8;
+}
+.boom .fas {
+  color: #e7091fe5;
 }
 
 .miss {
-  background-color: #00f181;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ece8e8;
+}
+.miss .fas {
+  color: #5cb8e9;
 }
 
 .grid-display {
@@ -184,6 +198,16 @@ header ul li a {
 
 .isHorizontal {
   display: flex;
+}
+
+.gameController {
+  font-family: "Stick No Bills", sans-serif;
+  font-size: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

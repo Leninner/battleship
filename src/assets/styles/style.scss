@@ -6,6 +6,7 @@
 
 $background-main: #eeeff0;
 $color-ships: #adaeaf;
+$red: #e7091fe5;
 
 .ocultar {
   display: none;
@@ -30,7 +31,7 @@ $color-ships: #adaeaf;
       color: white;
     }
     #tu {
-      background-color: #e7091fe5;
+      background-color: $red;
     }
     #cpu {
       background-color: #3f4454c4;
@@ -118,11 +119,25 @@ header {
 }
 
 .boom {
-  background-color: red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(236, 232, 232);
+  .fas {
+    color: $red;
+  }
 }
 
 .miss {
-  background-color: rgb(0, 241, 129);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(236, 232, 232);
+  .fas {
+    color: #5cb8e9;
+  }
 }
 
 .grid-display {
@@ -202,4 +217,14 @@ header {
 
 .isHorizontal {
   display: flex;
+}
+
+.gameController {
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }

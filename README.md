@@ -1,6 +1,6 @@
 # Battleship
 
-Juego popular hecho con las siguientes tecnologías:
+El juego clásico de Battleship.
 
 - Javascript => Para la lógica del juego
 - HTML5 => Para la maquetación

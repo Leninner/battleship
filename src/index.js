@@ -231,7 +231,7 @@ function dragDrop() {
     document.querySelector('.hidden-info').remove();
     playGame();
   } else {
-    turnDisplay.innerHTML = 'Ubica tus Fichas';
+    turnDisplay.innerHTML = 'Locate your ships';
   }
 }
 
@@ -259,7 +259,7 @@ function playGame() {
   if (currentPlayer === 'computer') {
     turnDisplay.innerHTML = 'Computer Go';
     // Función de Computer Go
-    setTimeout(computerGo, 500);
+    setTimeout(computerGo, 300);
   }
 }
 

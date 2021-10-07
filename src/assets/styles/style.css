@@ -170,68 +170,99 @@
 .game .miss .fas {
   color: #5cb8e9;
 }
-.game .grid-display {
-  width: 800px;
+.game .hidden-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.game .hidden-info button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  background-color: #e7091fe5;
+  border-style: none;
+  transition: 0.2s ease all;
+}
+.game .hidden-info button i {
+  color: white;
+}
+.game .hidden-info button:hover {
+  background-color: white;
+  outline: 1.5px solid #e7091fe5;
+}
+.game .hidden-info button:hover i {
+  color: #e7091fe5;
+}
+.game .me {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.game .me .grid-display {
+  width: 700px;
   display: flex;
   height: 220px;
-  background-color: yellow;
 }
-.game .grid-display .ships-container, .game .grid-display .carrier-container, .game .grid-display .battleship-container, .game .grid-display .cruiser-container, .game .grid-display .submarine-container, .game .grid-display .destroyer-container {
+.game .me .grid-display .ships-container, .game .me .grid-display .carrier-container, .game .me .grid-display .battleship-container, .game .me .grid-display .cruiser-container, .game .me .grid-display .submarine-container, .game .me .grid-display .destroyer-container {
   height: 35px;
   display: flex;
   margin: 10px;
 }
-.game .grid-display .ship div {
+.game .me .grid-display .ship div {
   width: 35px;
   height: 35px;
+  outline: 1.5px solid white;
+  border-radius: 5px;
 }
-.game .grid-display .destroyer-container {
+.game .me .grid-display .destroyer-container {
   width: 70px;
   background-color: #adaeaf;
 }
-.game .grid-display .destroyer-container-vertical {
+.game .me .grid-display .destroyer-container-vertical {
   width: 35px;
   height: 70px;
   flex-wrap: wrap;
 }
-.game .grid-display .submarine-container {
+.game .me .grid-display .submarine-container {
   width: 105px;
   background-color: #adaeaf;
 }
-.game .grid-display .submarine-container-vertical {
+.game .me .grid-display .submarine-container-vertical {
   width: 35px;
   height: 105px;
   flex-wrap: wrap;
 }
-.game .grid-display .cruiser-container {
+.game .me .grid-display .cruiser-container {
   width: 105px;
   background-color: #adaeaf;
 }
-.game .grid-display .cruiser-container-vertical {
+.game .me .grid-display .cruiser-container-vertical {
   width: 35px;
   height: 105px;
   flex-wrap: wrap;
 }
-.game .grid-display .battleship-container {
+.game .me .grid-display .battleship-container {
   width: 140px;
   background-color: #adaeaf;
 }
-.game .grid-display .battleship-container-vertical {
+.game .me .grid-display .battleship-container-vertical {
   width: 35px;
   height: 140px;
   flex-wrap: wrap;
 }
-.game .grid-display .carrier-container {
+.game .me .grid-display .carrier-container {
   width: 175px;
   background-color: #adaeaf;
 }
-.game .grid-display .carrier-container-vertical {
+.game .me .grid-display .carrier-container-vertical {
   width: 35px;
-  height: 140px;
+  height: 175px;
   flex-wrap: wrap;
 }
 .game .isHorizontal {
   display: flex;
+  justify-content: center;
 }
 .game .gameController {
   font-family: "Stick No Bills", sans-serif;

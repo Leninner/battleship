@@ -192,83 +192,117 @@ $red: #e7091fe5;
     }
   }
 
-  .grid-display {
-    width: 800px;
+  .hidden-info {
+    width: 100%;
     display: flex;
-    height: 220px;
-    background-color: yellow;
+    justify-content: center;
 
-    .ships-container {
-      height: 35px;
-      display: flex;
-      margin: 10px;
-    }
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      outline: none;
+      background-color: $red;
+      border-style: none;
+      transition: 0.2s ease all;
 
-    .ship {
-      div {
-        width: 35px;
-        height: 35px;
+      i {
+        color: white;
       }
     }
+    button:hover {
+      background-color: white;
+      outline: 1.5px solid $red;
+      i {
+        color: $red;
+      }
+    }
+  }
 
-    .destroyer-container {
-      width: 70px;
-      background-color: $color-ships;
-      @extend .ships-container;
-    }
-    .destroyer-container-vertical {
-      width: 35px;
-      height: 70px;
-      flex-wrap: wrap;
-    }
+  .me {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .grid-display {
+      width: 700px;
+      display: flex;
+      height: 220px;
 
-    .submarine-container {
-      width: 105px;
-      background-color: $color-ships;
-      @extend .ships-container;
-    }
-    .submarine-container-vertical {
-      width: 35px;
-      height: 105px;
-      flex-wrap: wrap;
-    }
+      .ships-container {
+        height: 35px;
+        display: flex;
+        margin: 10px;
+      }
 
-    .cruiser-container {
-      width: 105px;
-      @extend .ships-container;
-      background-color: $color-ships;
-    }
-    .cruiser-container-vertical {
-      width: 35px;
-      height: 105px;
-      flex-wrap: wrap;
-    }
+      .ship {
+        div {
+          width: 35px;
+          height: 35px;
+          outline: 1.5px solid white;
+          border-radius: 5px;
+        }
+      }
 
-    .battleship-container {
-      width: 140px;
-      @extend .ships-container;
-      background-color: $color-ships;
-    }
-    .battleship-container-vertical {
-      width: 35px;
-      height: 140px;
-      flex-wrap: wrap;
-    }
+      .destroyer-container {
+        width: 70px;
+        background-color: $color-ships;
+        @extend .ships-container;
+      }
+      .destroyer-container-vertical {
+        width: 35px;
+        height: 70px;
+        flex-wrap: wrap;
+      }
 
-    .carrier-container {
-      width: 175px;
-      @extend .ships-container;
-      background-color: $color-ships;
-    }
-    .carrier-container-vertical {
-      width: 35px;
-      height: 140px;
-      flex-wrap: wrap;
+      .submarine-container {
+        width: 105px;
+        background-color: $color-ships;
+        @extend .ships-container;
+      }
+      .submarine-container-vertical {
+        width: 35px;
+        height: 105px;
+        flex-wrap: wrap;
+      }
+
+      .cruiser-container {
+        width: 105px;
+        @extend .ships-container;
+        background-color: $color-ships;
+      }
+      .cruiser-container-vertical {
+        width: 35px;
+        height: 105px;
+        flex-wrap: wrap;
+      }
+
+      .battleship-container {
+        width: 140px;
+        @extend .ships-container;
+        background-color: $color-ships;
+      }
+      .battleship-container-vertical {
+        width: 35px;
+        height: 140px;
+        flex-wrap: wrap;
+      }
+
+      .carrier-container {
+        width: 175px;
+        @extend .ships-container;
+        background-color: $color-ships;
+      }
+      .carrier-container-vertical {
+        width: 35px;
+        height: 175px;
+        flex-wrap: wrap;
+      }
     }
   }
 
   .isHorizontal {
     display: flex;
+    justify-content: center;
   }
 
   .gameController {

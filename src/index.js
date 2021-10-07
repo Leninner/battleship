@@ -414,18 +414,24 @@ function checkForWin() {
   if (destroyerCount + submarineCount + cruiserCount + battleshipCount + carrierCount === 50) {
     turnDisplay.remove();
     //TODO: mostrar ganador en la página de inicio
-    infoDisplay.innerHTML = 'YOU WIN';
-    gameOver();
+    document.querySelector('#winners').classList.remove('ocultar');
+    document.querySelector('#winners').classList.add('declarateWinner');
+    document.querySelector('#winner').innerText = 'YOU WIN';
+    infoDisplay.innerHTML = '';
+    isGameOver = gameOver();
   }
   if (cpuDestroyerCount + cpuSubmarineCount + cpuCarrierCount + cpuBattleshipCount + cpuCruiserCount === 50) {
     turnDisplay.remove();
-    infoDisplay.innerHTML = 'CPU WIN';
-    gameOver();
+    document.querySelector('#winners').classList.remove('ocultar');
+    document.querySelector('#winners').classList.add('declarateWinner');
+    document.querySelector('#winner').innerText = 'CPU WIN';
+    infoDisplay.innerHTML = '';
+    isGameOver = gameOver();
   }
 }
 
 function gameOver() {
-  isGameOver = true;
+  return true;
 }
 
 //Métodos para iniciar juego y volver al home
@@ -437,5 +443,9 @@ startButton.addEventListener('click', () => {
 });
 
 document.querySelector('#return').addEventListener('click', () => {
+  window.location.reload();
+});
+
+document.querySelector('#Home').addEventListener('click', () => {
   window.location.reload();
 });

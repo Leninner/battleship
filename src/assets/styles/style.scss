@@ -319,3 +319,41 @@ $red: #e7091fe5;
 .autor {
   color: white;
 }
+
+.declarateWinner {
+  font-family: 'Stick No Bills', sans-serif;
+  font-size: 80px;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  background-color: #001219;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    button {
+      width: 250px;
+      height: 45px;
+      border-radius: 25px;
+      background-color: $red;
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+      outline: none;
+      border-style: none;
+      transition: 0.3s ease all;
+    }
+    button:hover {
+      background-color: white;
+      color: $red;
+      outline: 1.5px solid $red;
+    }
+  }
+}

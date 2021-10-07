@@ -7,3 +7,7 @@ El juego clásico de Battleship.
 - CSS => Para el diseño
 - SASS => Para preprocesar el diseño
 - NPM => Para manejar paquetes
+
+## No tiene versión responsive
+
+Al ser un juego que requiere de una forma en concreto para jugar, opté por mantenerla solamente en versión desktop.

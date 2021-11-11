@@ -63,6 +63,7 @@ const generate = (ship) => {
   const isAtRightEdge = current.some((index) => (randomStart + index) % width === width - 1);
   const isAtLeftEdge = current.some((index) => (randomStart + index) % width === 0);
 
+  // ~p AND ~q AND ~r
   if (!isTaken && !isAtLeftEdge && !isAtRightEdge) {
     current.forEach((element) => computerSquares[randomStart + element].classList.add('taken', ship.name));
   } else {
@@ -175,10 +176,12 @@ function dragDrop() {
   let newNotAllowedHorizontal = notAllowedHorizontal.splice(0, 10 * lastShipIndex);
   let newNotAllowedVertical = notAllowedVertical.splice(0, 10 * lastShipIndex);
 
+  // p AND ~q
   if (isHorizontal && !newNotAllowedHorizontal.includes(shipLastId)) {
     for (let i = 0; i < draggedShipLength; i++) {
       userSquares[parseInt(this.dataset.id) - selectedShipIndex + i].classList.add('taken', shipClass);
     }
+    // ~p AND ~q
   } else if (!isHorizontal && !newNotAllowedVertical.includes(shipLastId)) {
     for (let i = 0; i < draggedShipLength; i++) {
       userSquares[parseInt(this.dataset.id) - selectedShipIndex + width * i].classList.add('taken', shipClass);
